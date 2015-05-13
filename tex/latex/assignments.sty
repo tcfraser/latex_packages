@@ -1,8 +1,13 @@
 % Packages
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage[makeroom]{cancel} % For canceling out terms
 \usepackage{geometry} % For margins
 \usepackage[colorlinks=true, linkcolor=blue, citecolor=cyan]{hyperref} % automatic hyperlinks that are blue
+
+% Configuration
+\geometry{top=1.0in, bottom=1.0in, left=1.0in, right=1.0in} % margins all 1.0in
+\allowdisplaybreaks % allow equation environments to page break
 
 % Commands
 \newcommand{\ba}[1]{\left< #1 \right>} % brackets angled
@@ -18,6 +23,13 @@
 \newcommand{\intl}{\int\limits} % integral with limits alias
 \newcommand{\numberthis}{\addtocounter{equation}{1}\tag{\theequation}} % adds a number to unnumbered equation
 
-% Configuration
-\geometry{top=1.0in, bottom=1.0in, left=1.0in, right=1.0in} % margins all 1.0in
-\allowdisplaybreaks % allow equation environments to page break
+% Math Sets
+\newcommand{\R}{{\mathbb{R}}}
+\newcommand{\C}{{\mathbb{C}}}
+\newcommand{\Z}{{\mathbb{Z}}}
+\newcommand{\N}{{\mathbb{N}}}
+\newcommand{\Q}{{\mathbb{Q}}}
+
+% Vectors
+\newcommand{\va}{\vec{a}}
+\newcommand{\vb}{\vec{b}}
