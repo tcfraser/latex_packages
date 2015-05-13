@@ -1,0 +1,27 @@
+% Packages
+\usepackage{amsmath}
+\usepackage{const} % For constant terms
+\usepackage[makeroom]{cancel} % For canceling out terms
+\usepackage{geometry} % For margins
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=cyan]{hyperref} % automatic hyperlinks that are blue
+
+% Commands
+\newcommand{\ba}[1]{\left< #1 \right>} % brackets angled
+\newcommand{\bs}[1]{\left[ #1 \right]} % brackets square
+\newcommand{\br}[1]{\left( #1 \right)} % brackets round
+\newcommand{\del}{\nabla} % nabla alias
+\newcommand{\f}[2]{\frac{#1}{#2}} % fraction shorthand
+\newcommand{\pder}[2]{\frac{\partial #1}{\partial #2}} % partial derivative
+\newcommand{\pdder}[2]{\frac{\partial^2 #1}{\partial #2^2}} % partial double derivative
+\newcommand{\der}[2]{\frac{\mathrm{d} #1}{\mathrm{d} #2}} % derivative
+\newcommand{\dder}[2]{\frac{\mathrm{d}^2 #1}{\mathrm{d} #2^2}} % double derivative
+\newcommand{\dif}{\mathrm{d}} % differential
+\newcommand{\intl}{\int\limits} % integral with limits alias
+\newcommand{\numberthis}{\addtocounter{equation}{1}\tag{\theequation}} % adds a number to unnumbered equation
+
+% Frequent re-occuring values
+\const{exampleConst}{$e^{i\pi}$} % Usage '\exampleConst'
+
+% Configuration
+\geometry{top=1.0in, bottom=1.0in, left=1.0in, right=1.0in} % margins all 1.0in
+\allowdisplaybreaks % allow equation environments to page break
