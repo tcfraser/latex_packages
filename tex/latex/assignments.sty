@@ -22,6 +22,7 @@
 \newcommand{\der}[2]{\frac{\mathrm{d} #1}{\mathrm{d} #2}} % derivative
 \newcommand{\dder}[2]{\frac{\mathrm{d}^2 #1}{\mathrm{d} #2^2}} % double derivative
 \newcommand{\intl}{\int\limits} % integral with limits alias
+\newcommand{\Lagr}{\mathcal{L}}
 \newcommand{\numberthis}{\addtocounter{equation}{1}\tag{\theequation}} % adds a number to unnumbered equation
 
 % Math Sets
@@ -45,3 +46,17 @@
 \newcommand{\dtheta}{\dif \theta}
 \newcommand{\drho}{\dif \rho}
 \newcommand{\ds}{\dif s}
+
+% Matricies
+\newcommand{\fmtrx}[4] {
+\begin{bmatrix}
+    #1 & #2 \\
+    #3 & #4
+\end{bmatrix}
+}
+\newcommand{\tvec}[2] {
+\begin{bmatrix}
+    #1\\
+    #2
+\end{bmatrix}
+}
