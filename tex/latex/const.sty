@@ -2,5 +2,14 @@
 
 % Defining const terms with appropriate xspace.
 \newcommand{\const}[2]{%
-\expandafter\newcommand\csname #1 \endcsname{ #2 \xspace }%
+\expandafter\newcommand\csname #1\endcsname{#2\xspace}%
+}
+
+% Sets a command to a value
+\newcommand{\set}[2]{%
+    \ifcsname #1\endcsname%
+        \expandafter\renewcommand\csname #1\endcsname{#2\xspace}%
+    \else%
+        \expandafter\newcommand\csname #1\endcsname{#2\xspace}%
+    \fi%
 }

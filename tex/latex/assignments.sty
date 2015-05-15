@@ -1,13 +1,103 @@
 % Packages
 \usepackage{amsmath}
-\usepackage{amssymb}
+\usepackage{amssymb} % For set symbols
 \usepackage[makeroom]{cancel} % For canceling out terms
-\usepackage{geometry} % For margins
 \usepackage[colorlinks=true, linkcolor=blue, citecolor=cyan]{hyperref} % automatic hyperlinks that are blue
+\usepackage{fancyhdr} % Required for custom headers
+\usepackage{extramarks} % Required for headers and footers
+\usepackage{lastpage} % For total page count
+\usepackage{const} % For defining constant configuarion
 
 % Configuration
-\geometry{top=1.0in, bottom=1.0in, left=1.0in, right=1.0in} % margins all 1.0in
 \allowdisplaybreaks % allow equation environments to page break
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+% Setting Values
+\set{AuthorName}{Author Name}
+\set{StudentID}{123456789}
+\set{Email}{example@example.com}
+\set{ClassName}{Class Name}
+\set{InstructorName}{Instructor Name}
+\set{AssignmentTitle}{Assignment 0}
+\set{DueDate}{Due Date}
+\set{DateCompleted}{\today}
+
+% Set up the header and footer
+\pagestyle{fancy}
+\lhead{\AuthorName} % Top left header
+\chead{\ClassName: \AssignmentTitle} % Top center header
+\rhead{\firstxmark} % Top right header
+\lfoot{\lastxmark} % Bottom left footer
+\cfoot{} % Bottom center footer
+\rfoot{Page\ \thepage\ of\ \pageref{LastPage}} % Bottom right footer
+\renewcommand\headrulewidth{0.4pt} % Size of the header rule
+\renewcommand\footrulewidth{0.4pt} % Size of the footer rule
+
+% Header and footer for when a page split occurs within a problem environment
+\newcommand{\onEnterProblem}[1]{
+\nobreak\extramarks{#1}{#1 continued on next page\ldots}\nobreak
+\nobreak\extramarks{#1 (continued)}{#1 continued on next page\ldots}\nobreak
+}
+
+% Header and footer for when a page split occurs between problem environments
+\newcommand{\onExitProblem}[1]{
+\nobreak\extramarks{#1 (continued)}{#1 continued on next page\ldots}\nobreak
+\nobreak\extramarks{}{}\nobreak
+}
+
+% Defines the counter for the problems
+\newcounter{ProblemCounter} % Creates a counter to keep track of the number of problems
+
+% Defines the problem environment
+\setcounter{secnumdepth}{0} % Removes default section numbers
+\newcommand{\ProblemName}{} % Initializes Problem Name
+\newenvironment{Problem}[1][Problem \arabic{ProblemCounter}]{ % Makes a new environment called homeworkProblem which takes 1 argument (custom name) but the default is "Problem #"
+\stepcounter{ProblemCounter} % Increase counter for number of problems
+\renewcommand{\ProblemName}{#1} % Assign \ProblemName the name of the problem
+\section{\ProblemName} % Make a section in the document with the custom problem count
+\onEnterProblem{\ProblemName} % Upon entering the environment
+}{
+\onExitProblem{\ProblemName} % Upon exiting the environment
+}
+
+% Defines the problem section environment
+\newcommand{\ProblemSectionName}{}
+\newenvironment{ProblemSection}[1]{ % New environment for sections within homework problems, takes 1 argument - the name of the section
+\renewcommand{\ProblemSectionName}{#1} % Assign \ProblemSectionName to the name of the section from the environment argument
+\subsection{\ProblemSectionName} % Make a subsection with the custom name of the subsection
+\onEnterProblem{\ProblemName\ \ProblemSectionName} % Header and footer within the environment
+}{
+\onExitProblem{\ProblemName\ \ProblemSectionName} % Header and footer after the environment
+}
+
+% Title Page
+\newcommand{\titlePage}{
+\maketitle
+\thispagestyle{empty}
+\newpage
+}
+\title{
+\vspace{1in}
+\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} % Thick horizontal line
+\rule{\textwidth}{0.4pt}\\[\baselineskip] % Thin horizontal line
+\large{\textmd{\textbf{\MakeUppercase{\ClassName}}}}\\
+\textbf{\AssignmentTitle}\\
+\normalsize
+\vspace{0.1in}
+\small{Prepared For: \InstructorName}\\
+\small{Due\ on\ \DueDate}\\
+\vspace{0.1in}
+\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt} % Thin horizontal line
+\rule{\textwidth}{1.6pt}\\[\baselineskip] % Thick horizontal line
+\vfill
+\author{\AuthorName\\ \StudentID \\ \Email}
+}
 
 % Commands
 \newcommand{\ba}[1]{\left< #1 \right>} % brackets angled
@@ -46,17 +136,3 @@
 \newcommand{\dtheta}{\dif \theta}
 \newcommand{\drho}{\dif \rho}
 \newcommand{\ds}{\dif s}
-
-% Matricies
-\newcommand{\fmtrx}[4] {
-\begin{bmatrix}
-    #1 & #2 \\
-    #3 & #4
-\end{bmatrix}
-}
-\newcommand{\tvec}[2] {
-\begin{bmatrix}
-    #1\\
-    #2
-\end{bmatrix}
-}
