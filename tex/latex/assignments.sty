@@ -7,6 +7,11 @@
 \usepackage{extramarks} % Required for headers and footers
 \usepackage{lastpage} % For total page count
 \usepackage{const} % For defining constant configuarion
+\usepackage{siunitx} % For units
+\usepackage{tikz} % For drawing things on graphs
+\usepackage{pgfplots} % For Graphing
+\usepackage{pgfplotstable} % For linear regression on pgfplot graphs
+\pgfplotsset{compat=1.12} % Requesting a specific version
 
 % Configuration
 \allowdisplaybreaks % allow equation environments to page break
@@ -109,10 +114,10 @@
 \newcommand{\f}[2]{\frac{#1}{#2}} % fraction shorthand
 \newcommand{\pder}[2]{\frac{\partial #1}{\partial #2}} % partial derivative
 \newcommand{\pdder}[2]{\frac{\partial^2 #1}{\partial #2^2}} % partial double derivative
-\newcommand{\der}[2]{\frac{\mathrm{d} #1}{\mathrm{d} #2}} % derivative
-\newcommand{\dder}[2]{\frac{\mathrm{d}^2 #1}{\mathrm{d} #2^2}} % double derivative
+\newcommand{\der}[2]{\frac{\dif #1}{\dif #2}} % derivative
+\newcommand{\dder}[2]{\frac{\dif^2 #1}{\dif #2^2}} % double derivative
 \newcommand{\intl}{\int\limits} % integral with limits alias
-\newcommand{\Lagr}{\mathcal{L}}
+\newcommand{\celsius}{^o C} % Simple celsius I'll likely improve later
 \newcommand{\numberthis}{\addtocounter{equation}{1}\tag{\theequation}} % adds a number to unnumbered equation
 
 % Math Sets
