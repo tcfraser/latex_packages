@@ -1,4 +1,5 @@
 % Packages
+\usepackage{mathmacros}
 \usepackage{amsmath}
 \usepackage{esint} % For closed integrals
 \usepackage{amssymb} % For set symbols
@@ -103,75 +104,4 @@
 \rule{\textwidth}{1.6pt}\\[\baselineskip] % Thick horizontal line
 \vfill
 \author{\AuthorName\\ \StudentID \\ \Email}
-}
-
-% Commands
-\newcommand{\ba}[1]{\left< #1 \right>} % brackets angled
-\newcommand{\bs}[1]{\left[ #1 \right]} % brackets square
-\newcommand{\br}[1]{\left( #1 \right)} % brackets round
-\newcommand{\bc}[1]{\left\{ #1 \right\}} % brackets curly
-\newcommand{\abs}[1]{\left| #1 \right|} % brackets absolute value
-\newcommand{\norm}[1]{\left\lVert#1\right\rVert} % norm
-\newcommand{\del}{\nabla} % nabla alias
-\newcommand{\di}{\partial} % di alias
-\newcommand{\f}[2]{\frac{#1}{#2}} % fraction shorthand
-\newcommand{\pder}[2]{\frac{\partial #1}{\partial #2}} % partial derivative
-\newcommand{\pdder}[2]{\frac{\partial^2 #1}{\partial #2^2}} % partial double derivative
-\newcommand{\der}[2]{\frac{\dif #1}{\dif #2}} % derivative
-\newcommand{\dder}[2]{\frac{\dif^2 #1}{\dif #2^2}} % double derivative
-\newcommand{\celsius}{^o C} % Simple celsius I'll likely improve later
-\newcommand{\w}{\omega} % omega alias
-\newcommand{\numberthis}{\addtocounter{equation}{1}\tag{\theequation}} % adds a number to unnumbered equation
-\newcommand{\intl}{\int\limits} % integral with limits alias
-\newcommand{\ointl}{\oint\limits} % integral with limits alias
-\newcommand{\iintl}{\iint\limits} % integral with limits alias
-\newcommand{\oiintl}{\oiint\limits} % integral with limits alias
-\newcommand{\iiintl}{\iiint\limits} % integral with limits alias
-\newcommand{\oiiintl}{\oiiint\limits} % integral with limits alias
-
-% Horizontal Box used for drawing in post-compilation
-\newcommand{\cbox}{\begin{center}
-\fbox{\begin{minipage}{4in} \hfill\vspace{2.0in} \end{minipage}}
-\end{center}}
-
-% Math Sets
-\newcommand{\R}{{\mathbb{R}}}
-\newcommand{\C}{{\mathbb{C}}}
-\newcommand{\Z}{{\mathbb{Z}}}
-\newcommand{\N}{{\mathbb{N}}}
-\newcommand{\Q}{{\mathbb{Q}}}
-
-% Vectors
-\newcommand{\va}{\vec{a}}
-\newcommand{\vb}{\vec{b}}
-\newcommand{\vx}{\vec{x}}
-
-% Differentials
-\newcommand{\dif}{\mathrm{d}} % differential
-\newcommand{\dx}{\dif x}
-\newcommand{\dy}{\dif y}
-\newcommand{\dz}{\dif z}
-\newcommand{\dt}{\dif t}
-\newcommand{\dphi}{\dif \phi}
-\newcommand{\dtheta}{\dif \theta}
-\newcommand{\drho}{\dif \rho}
-\newcommand{\ds}{\dif s}
-
-% Wronskian
-\newcommand{\wron}{W[y_1,y_2](x)}
-
-% 2x2 Matrix
-\newcommand{\mtrx}[4]{
-    \begin{bmatrix}
-    #1 & #2 \\
-    #3 & #4
-    \end{bmatrix}
-}
-
-% 2 Column Vector
-\newcommand{\twovec}[2]{
-    \begin{bmatrix}
-    #1 \\
-    #2
-    \end{bmatrix}
 }
