@@ -73,9 +73,13 @@
 \onExitProblem{\ProblemName} % Upon exiting the environment
 }
 
+\newcounter{ProblemSectionCounter}[ProblemCounter]
+ % Creates a counter to keep track of the sections within a problem
+
 % Defines the problem section environment
 \newcommand{\ProblemSectionName}{}
-\newenvironment{ProblemSection}[1]{ % New environment for sections within homework problems, takes 1 argument - the name of the section
+\newenvironment{ProblemSection}[1][(\alph{ProblemCounter})]{ % New environment for sections within homework problems, takes 1 argument - the name of the section
+\stepcounter{ProblemSectionCounter} % Increase counter for number of problem sections
 \renewcommand{\ProblemSectionName}{#1} % Assign \ProblemSectionName to the name of the section from the environment argument
 \subsection{\ProblemSectionName} % Make a subsection with the custom name of the subsection
 \onEnterProblem{\ProblemName\ \ProblemSectionName} % Header and footer within the environment
