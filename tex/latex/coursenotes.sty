@@ -1,0 +1,103 @@
+% Packages
+\usepackage{mathmacros}
+\usepackage{amsmath}
+\usepackage{esint} % For closed integrals
+\usepackage{amssymb} % For set symbols
+\usepackage[makeroom]{cancel} % For canceling out terms
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=cyan]{hyperref} % automatic hyperlinks that are blue
+\usepackage{fancyhdr} % Required for custom headers
+\usepackage{extramarks} % Required for headers and footers
+\usepackage{lastpage} % For total page count
+\usepackage{const} % For defining constant configuarion
+\usepackage{siunitx} % For units
+\usepackage{tikz} % For drawing things on graphs
+\usepackage{pgfplots} % For Graphing
+\usepackage{color} % For Colors
+\usepackage{chngpage} % For indentation
+\usepackage{centernot} % For doesn't implies
+\usepackage{pgfplotstable} % For linear regression on pgfplot graphs
+\pgfplotsset{compat=1.12} % Requesting a specific version
+
+% Configuration
+\allowdisplaybreaks % allow equation environments to page break
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6.5in
+\textheight=9.0in
+\headsep=0.25in
+
+% Setting Values
+\set{AuthorName}{Author Name}
+\set{Email}{example@example.com}
+\set{Website}{example.com}
+\set{ClassName}{Class Name}
+\set{School}{School/Institution Name}
+\set{CourseCode}{Course Code}
+\set{InstructorName}{Instructor Name}
+\set{Term}{Season Year}
+\set{Version}{1.0}
+
+% Set up the header and footer
+\pagestyle{fancy}
+\lhead{\Term} % Top left header
+\chead{\ClassName} % Top center header
+\rhead{\leftmark} % Top right header
+\lfoot{\AuthorName} % Bottom left footer
+\cfoot{} % Bottom center footer
+\rfoot{Page\ \thepage\ of\ \pageref{LastPage}} % Bottom right footer
+\renewcommand\headrulewidth{0.4pt} % Size of the header rule
+\renewcommand\footrulewidth{0.4pt} % Size of the footer rule
+
+% Title Page
+\newcommand{\titlePage}{
+\maketitle
+\thispagestyle{empty}
+\newpage
+}
+
+\title{
+% \vspace{1in}
+\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} % Thick horizontal line
+\rule{\textwidth}{0.4pt}\\[\baselineskip] % Thin horizontal line
+\Huge{\textbf{\CourseCode}}\\
+\vspace{0.1in}
+\large{\textmd{\textbf{\MakeUppercase{\ClassName}}}}\\
+\vspace{0.1in}
+\textbf{\School}\\
+\normalsize
+\vspace{0.1in}
+\small{Course notes by: \AuthorName}\\
+\small{Instructor: \InstructorName}\\
+\vspace{0.2in}
+% \vspace{0.1in}
+\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt} % Thin horizontal line
+\rule{\textwidth}{1.6pt}\\[\baselineskip] % Thick horizontal line
+\vfill
+\date{\vspace{-5ex}}
+\author{\Email\\ \small{Version: \Version}}
+}
+
+% Table of Contents
+\renewcommand{\contentsname}{Table Of Contents}
+\newcommand{\tableOfContents}{
+    \tableofcontents
+    \addtocontents{toc}{~\hfill\textbf{Page}\par}
+    % \chapter{...}
+    \newpage
+}
+
+% Summary of notes and disclaimer
+\newcommand{\disclaimer}{
+    \begin{adjustwidth}{0.5in}{0.5in}
+        \section*{Disclaimer}
+        These notes are intended to be a reference for my future self (\AuthorName). If you the reader find these notes useful for yourself in any capacity, please feel free to use these notes as you wish, free of charge. However, I do not garantee their complete accuracy and mistakes are likely present. If you notice any errors please email me at \textbf{\Email}, or contribute directly at \textbf{https://github.com/tcfraser/course-notes}. If you are the professor of this course and you've managed to stumble upon these notes and would like to make larges changes or additions, email me please.
+        \\ \\
+        Latest versions of all my course notes are available at \textbf{\Website}.
+    \end{adjustwidth}
+    \newpage
+}
+
+% TODO
+\newcommand{\TODO}{\centerline{\textcolor{red}{TODO Unfinished}}}
