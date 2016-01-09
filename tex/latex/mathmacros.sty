@@ -10,18 +10,23 @@
 \newcommand{\bs}[1]{\left[ #1 \right]} % brackets square
 \newcommand{\br}[1]{\left( #1 \right)} % brackets round
 \newcommand{\bc}[1]{\left\{ #1 \right\}} % brackets curly
+\newcommand{\bre}[1]{\left(#1\right\rvert} % evaluated at brackets
+\newcommand{\bse}[1]{\left[#1\right\rvert} % evaluated at brackets
 \newcommand{\abs}[1]{\left| #1 \right|} % brackets absolute value
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert} % norm
 \newcommand{\cross}{\times} % cross alias
 \newcommand{\tenprod}{\otimes} % tensor product alias
 \newcommand{\iso}{\cong} % isomorphic alias
 \newcommand{\del}{\nabla} % nabla alias
+\renewcommand{\inf}{\infty} % infty alias NOTE: this replaces the inf operator
 \newcommand{\di}{\partial} % di alias
 \newcommand{\defined}{\equiv} % defined alias
 \newcommand{\f}[2]{\frac{#1}{#2}} % fraction shorthand
 \newcommand{\pder}[2]{\frac{\partial #1}{\partial #2}} % partial derivative
+\newcommand{\pderk}[3]{\frac{\partial^{#1} #2}{\partial #3^{#1}}} % partial derivative
 \newcommand{\pdder}[2]{\frac{\partial^2 #1}{\partial #2^2}} % partial double derivative
 \newcommand{\der}[2]{\frac{\dif #1}{\dif #2}} % derivative
+\newcommand{\derk}[3]{\frac{\dif^{#1} #2}{\dif #3^{#1}}} % derivative
 \newcommand{\dder}[2]{\frac{\dif^2 #1}{\dif #2^2}} % double derivative
 \newcommand{\celsius}{^o C} % Simple celsius I'll likely improve later
 \newcommand{\w}{\omega} % omega alias
@@ -34,7 +39,8 @@
 \newcommand{\iiintl}{\iiint\limits} % integral with limits alias
 \newcommand{\oiiintl}{\oiiint\limits} % integral with limits alias
 \newcommand{\st}{\mid} % integral with limits alias
-\newcommand{\ts}[1]{_\text{#1}} % Text subscript
+\newcommand{\tsb}[1]{_\text{#1}} % Text subscript
+\newcommand{\tsp}[1]{^\text{#1}} % Text superscript
 \newcommand{\note}[1]{\quad \text{#1}} % Equation note
 
 % sequences
@@ -53,9 +59,13 @@
 \newcommand{\Ga}{\Gamma}
 \newcommand{\de}{\delta}
 \newcommand{\De}{\Delta}
+\newcommand{\ep}{\epsilon}
+\newcommand{\vep}{\varepsilon}
+\newcommand{\Ep}{\epsilon}
+\newcommand{\om}{\omega}
+\newcommand{\Om}{\Omega}
 
 % Trace
-
 \DeclareMathOperator{\Tr}{Tr}
 \DeclareMathOperator{\Lin}{Lin}
 \DeclareMathOperator{\Bin}{Bin}
@@ -85,6 +95,7 @@
 
 % Differentials
 \newcommand{\dif}{\mathrm{d}} % differential
+\newcommand{\indif}{{\mathchar'26\mkern-12mu \mathrm{d}}} % differential
 \newcommand{\dx}{\dif x}
 \newcommand{\dy}{\dif y}
 \newcommand{\dz}{\dif z}
