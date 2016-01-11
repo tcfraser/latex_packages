@@ -2,10 +2,8 @@
 \usepackage{amsmath}
 \usepackage{esint} % For closed integrals
 \usepackage{amssymb} % For set symbols
-\usepackage[makeroom]{cancel} % For canceling out terms
-\usepackage{siunitx} % For units
 
-% Commands
+% Brackets
 \newcommand{\ba}[1]{\left< #1 \right>} % brackets angled
 \newcommand{\bs}[1]{\left[ #1 \right]} % brackets square
 \newcommand{\br}[1]{\left( #1 \right)} % brackets round
@@ -13,6 +11,8 @@
 \newcommand{\bre}[1]{\left(#1\right\rvert} % evaluated at brackets
 \newcommand{\bse}[1]{\left[#1\right\rvert} % evaluated at brackets
 \newcommand{\abs}[1]{\left| #1 \right|} % brackets absolute value
+
+\newcommand{\f}[2]{\frac{#1}{#2}} % fraction shorthand
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert} % norm
 \newcommand{\cross}{\times} % cross alias
 \newcommand{\tenprod}{\otimes} % tensor product alias
@@ -21,23 +21,10 @@
 \renewcommand{\inf}{\infty} % infty alias NOTE: this replaces the inf operator
 \newcommand{\di}{\partial} % di alias
 \newcommand{\defined}{\equiv} % defined alias
-\newcommand{\f}[2]{\frac{#1}{#2}} % fraction shorthand
-\newcommand{\pder}[2]{\frac{\partial #1}{\partial #2}} % partial derivative
-\newcommand{\pderk}[3]{\frac{\partial^{#1} #2}{\partial #3^{#1}}} % partial derivative
-\newcommand{\pdder}[2]{\frac{\partial^2 #1}{\partial #2^2}} % partial double derivative
-\newcommand{\der}[2]{\frac{\dif #1}{\dif #2}} % derivative
-\newcommand{\derk}[3]{\frac{\dif^{#1} #2}{\dif #3^{#1}}} % derivative
-\newcommand{\dder}[2]{\frac{\dif^2 #1}{\dif #2^2}} % double derivative
 \newcommand{\celsius}{^o C} % Simple celsius I'll likely improve later
 \newcommand{\w}{\omega} % omega alias
 \newcommand{\sL}{\mathcal{L}} % Lagrangian script
 \newcommand{\numberthis}{\addtocounter{equation}{1}\tag{\theequation}} % adds a number to unnumbered equation
-\newcommand{\intl}{\int\limits} % integral with limits alias
-\newcommand{\ointl}{\oint\limits} % integral with limits alias
-\newcommand{\iintl}{\iint\limits} % integral with limits alias
-\newcommand{\oiintl}{\oiint\limits} % integral with limits alias
-\newcommand{\iiintl}{\iiint\limits} % integral with limits alias
-\newcommand{\oiiintl}{\oiiint\limits} % integral with limits alias
 \newcommand{\st}{\mid} % integral with limits alias
 \newcommand{\tsb}[1]{_\text{#1}} % Text subscript
 \newcommand{\tsp}[1]{^\text{#1}} % Text superscript
@@ -105,8 +92,22 @@
 \newcommand{\dtheta}{\dif \theta}
 \newcommand{\drho}{\dif \rho}
 \newcommand{\ds}{\dif s}
+\newcommand{\pder}[2]{\frac{\partial #1}{\partial #2}} % partial derivative
+\newcommand{\pderk}[3]{\frac{\partial^{#1} #2}{\partial #3^{#1}}} % partial derivative
+\newcommand{\pdder}[2]{\frac{\partial^2 #1}{\partial #2^2}} % partial double derivative
+\newcommand{\der}[2]{\frac{\dif #1}{\dif #2}} % derivative
+\newcommand{\derk}[3]{\frac{\dif^{#1} #2}{\dif #3^{#1}}} % derivative
+\newcommand{\dder}[2]{\frac{\dif^2 #1}{\dif #2^2}} % double derivative
 
-%Piecewise
+% integrals
+\newcommand{\intl}{\int\limits} % integral with limits alias
+\newcommand{\ointl}{\oint\limits} % integral with limits alias
+\newcommand{\iintl}{\iint\limits} % integral with limits alias
+\newcommand{\oiintl}{\oiint\limits} % integral with limits alias
+\newcommand{\iiintl}{\iiint\limits} % integral with limits alias
+\newcommand{\oiiintl}{\oiiint\limits} % integral with limits alias
+
+% Piecewise
 \newcommand{\piecewise}[4]{
     \begin{cases}
         #1 & #2 \\
