@@ -1,6 +1,7 @@
 % Packages
 \usepackage{amsmath}
 \usepackage{esint} % For closed integrals
+\usepackage{fancyvec} % For better vectors
 \usepackage{amssymb} % For set symbols
 
 % Brackets
@@ -75,12 +76,7 @@
 \newcommand{\Q}{{\mathbb{Q}}}
 
 % Vectors
-\newcommand{\va}{\vec{a}}
-\newcommand{\vb}{\vec{b}}
-\newcommand{\vx}{\vec{x}}
-\newcommand{\vv}{\vec{v}}
-\newcommand{\vr}{\vec{r}}
-
+% see fancyvec
 % tilde
 \newcommand{\ti}[1]{\tilde{#1}\hspace{0pt}} % Note the hspace is for {\ti{a}^b}_c to render correctly
 
@@ -98,9 +94,11 @@
 \newcommand{\ds}{\dif s}
 \newcommand{\pder}[2]{\frac{\partial #1}{\partial #2}} % partial derivative
 \newcommand{\pderk}[3]{\frac{\partial^{#1} #2}{\partial #3^{#1}}} % partial derivative
+\newcommand{\pdert}[3]{\br{\frac{\partial #1}{\partial #2}}_{#3}} % partial derivative
 \newcommand{\pdder}[2]{\frac{\partial^2 #1}{\partial #2^2}} % partial double derivative
 \newcommand{\der}[2]{\frac{\dif #1}{\dif #2}} % derivative
 \newcommand{\derk}[3]{\frac{\dif^{#1} #2}{\dif #3^{#1}}} % derivative
+\newcommand{\dert}[3]{\br{\frac{\dif #1}{\dif #2}}_{#3}} % partial derivative
 \newcommand{\dder}[2]{\frac{\dif^2 #1}{\dif #2^2}} % double derivative
 
 % integrals
