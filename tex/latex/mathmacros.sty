@@ -15,7 +15,7 @@
 \newcommand{\bra}[1]{\left< #1 \right|} % bra
 \newcommand{\ket}[1]{\left| #1 \right>} % ket
 \newcommand{\braket}[2]{\left< #1 \middle| #2 \right>} % bra|ket
-\newcommand{\bramidket}[3]{\left< #1 \middle| #2 \middle| #3 \right>} % bra|ket
+\newcommand{\bramidket}[3]{\left< #1 \middle| #2 \middle| #3 \right>} % bra|mid|ket
 
 \newcommand{\f}[2]{\frac{#1}{#2}} % fraction shorthand
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert} % norm
@@ -104,7 +104,11 @@
 
 % integrals
 \newcommand{\intl}{\int\limits} % integral with limits alias
+<<<<<<< HEAD
 \newcommand{\intlf}{\intl_{-\infty}^{\infty}} % integral with limits alias
+=======
+\newcommand{\intlf}{\intl_{-\infty}^{\infty}} % integral between neg and pos infinity
+>>>>>>> cf6c73fb2b6cf9e035cc58b759d476878275ea10
 \newcommand{\ointl}{\oint\limits} % integral with limits alias
 \newcommand{\iintl}{\iint\limits} % integral with limits alias
 \newcommand{\oiintl}{\oiint\limits} % integral with limits alias
