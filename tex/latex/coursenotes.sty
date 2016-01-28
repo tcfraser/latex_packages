@@ -12,12 +12,13 @@
 \usepackage{const} % For defining constant configuarion
 \usepackage{siunitx} % For units
 \usepackage{tikz} % For drawing things on graphs
-\usetikzlibrary{calc}
+\usetikzlibrary{calc} % For relative points
+\usetikzlibrary{decorations.markings} % for arrows half way
 \usepackage{pgfplots} % For Graphing
+\usepgflibrary{fpu} % To deal with dimension too large errors
 \usepackage{color} % For Colors
 \usepackage{chngpage} % For indentation
 \usepackage{graphicx} % For images
-\usepackage{csquotes} % For quotes
 \usepackage[super]{nth} % For 1st, 2nd, 3rd etc.
 \usepackage{centernot} % For doesn't implies
 \usepackage{pgfplotstable} % For linear regression on pgfplot graphs
@@ -25,6 +26,7 @@
 \usepackage[utf8]{inputenc} % Font with all characters
 \usepackage[T1]{fontenc} % Font with all characters
 \usepackage{lmodern} % Font with all characters
+\usepackage{csquotes} % For quotes
 
 % Configuration
 \allowdisplaybreaks % allow equation environments to page break
