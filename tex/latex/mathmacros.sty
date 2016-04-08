@@ -3,12 +3,14 @@
 \usepackage{esint} % For closed integrals
 \usepackage{fancyvec} % For better vectors
 \usepackage{amssymb} % For set symbols
+\usepackage{mathtools} % For ceiling/floor brackets
 
 % Brackets
 \newcommand{\ba}[1]{\left< #1 \right>} % brackets angled
 \newcommand{\bs}[1]{\left[ #1 \right]} % brackets square
 \newcommand{\br}[1]{\left( #1 \right)} % brackets round
 \newcommand{\bc}[1]{\left\{ #1 \right\}} % brackets curly
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil} % brackets ceiling
 \newcommand{\bre}[1]{\left(#1\right\rvert} % evaluated at brackets
 \newcommand{\bse}[1]{\left[#1\right\rvert} % evaluated at brackets
 \newcommand{\abs}[1]{\left| #1 \right|} % brackets absolute value
@@ -132,7 +134,7 @@
 % siunitx
 \DeclareSIUnit\parsec{pc}
 \DeclareSIUnit\rot{rot}
-\DeclareSIUnit\yrs{yrs}
+\DeclareSIUnit\yr{yr}
 \DeclareSIUnit\AU{AU}
 
 % Piecewise

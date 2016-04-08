@@ -11,9 +11,6 @@
 \textheight=9.5in
 \headsep=0.25in
 
-% Setting Values
-\set{Date}{Jan. 1st 2000}
-
 % Title
 \renewcommand{\title}[1]{
     \begin{center}
@@ -36,4 +33,11 @@
     \begin{adjustwidth}{0.5in}{0.5in}
         #1
     \end{adjustwidth}
+}
+
+\renewcommand{\date}[1]{
+    \begin{center}
+        \set{Date}{#1}
+        (Dated: #1)
+    \end{center}
 }
