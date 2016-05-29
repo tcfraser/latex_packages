@@ -21,3 +21,5 @@ However if **files** get added or deleted from this, you will need to force `MiK
 1. Run `mo.exe`. This opens up `MiKTeK` options. 
 2. Go to the General tab.
 3. Click Refresh FNDB.
+
+*Note:* Don't put `.tex` files in directories on the root. I can't explain why but files won't compile unless they are outside these folders.
