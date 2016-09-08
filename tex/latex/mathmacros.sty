@@ -147,9 +147,10 @@
 \newcommand{\oiiintl}{\oiiint\limits} % integral with limits alias
 
 % siunitx
-\DeclareSIUnit\parsec{pc}
+\DeclareSIUnit\pc{pc}
 \DeclareSIUnit\rot{rot}
 \DeclareSIUnit\yr{yr}
+\DeclareSIUnit\lyr{lyr}
 \DeclareSIUnit\AU{AU}
 
 % Piecewise
@@ -173,9 +174,9 @@
 
 % Block vector or matrix
 \newcommand{\pmtrx}[1]{
-    \begin{bmatrix}
+    \begin{pmatrix}
     #1
-    \end{bmatrix}
+    \end{pmatrix}
 }
 
 % 2 Column Vector
