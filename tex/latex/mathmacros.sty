@@ -28,22 +28,17 @@
 
 \newcommand{\f}[2]{\frac{#1}{#2}} % fraction shorthand
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert} % norm
-\newcommand{\cross}{\times} % cross alias
-\newcommand{\tenprod}{\otimes} % tensor product alias
 \newcommand{\iso}{\cong} % isomorphic alias
 \newcommand{\del}{\nabla} % nabla alias
 \newcommand{\vdel}{\vec{\nabla}} % nabla alias
 \newcommand{\curl}{\vdel\times} % curl operator
 \renewcommand{\div}{\vdel\cdot} % divergence operator NOTE: this overrides the division symbol
-\newcommand{\lapl}{\del^2} % Laplacian
 \renewcommand{\inf}{\infty} % infty alias NOTE: this replaces the inf operator
 \newcommand{\di}{\partial} % di alias
 \newcommand{\defined}{\equiv} % defined alias
 \newcommand{\celsius}{^o C} % Simple celsius I'll likely improve later
 \newcommand{\w}{\omega} % omega alias
-\newcommand{\sL}{\mathcal{L}} % Lagrangian script
 \newcommand{\eq}{\addtocounter{equation}{1}\tag{\theequation}} % adds a number to unnumbered equation
-\newcommand{\st}{\mid} % integral with limits alias
 \newcommand{\tsb}[1]{_\text{#1}} % Text subscript
 \newcommand{\tsp}[1]{^\text{#1}} % Text superscript
 \newcommand{\note}[1]{\quad \text{#1}} % Equation note
@@ -84,10 +79,6 @@
 \DeclareMathOperator{\Bin}{Bin}
 \DeclareMathOperator{\sgn}{sgn}
 \DeclareMathOperator{\sinc}{sinc}
-
-% arrows
-\newcommand{\ar}{\rightarrow}
-\newcommand{\lar}{\leftarrow}
 
 % Horizontal Box used for drawing in post-compilation
 \newcommand{\cbox}{\begin{center}
@@ -152,37 +143,3 @@
 \DeclareSIUnit\yr{yr}
 \DeclareSIUnit\lyr{lyr}
 \DeclareSIUnit\AU{AU}
-
-% Piecewise
-\newcommand{\piecewise}[4]{
-    \begin{cases}
-        #1 & #2 \\
-        #3 & #4
-    \end{cases}
-}
-
-
-% Wronskian
-\newcommand{\wron}{W[y_1,y_2](x)}
-
-% Block vector or matrix
-\newcommand{\mtrx}[1]{
-    \begin{bmatrix}
-    #1
-    \end{bmatrix}
-}
-
-% Block vector or matrix
-\newcommand{\pmtrx}[1]{
-    \begin{pmatrix}
-    #1
-    \end{pmatrix}
-}
-
-% 2 Column Vector
-\newcommand{\twovec}[2]{
-    \begin{bmatrix}
-    #1 \\
-    #2
-    \end{bmatrix}
-}
