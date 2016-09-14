@@ -12,6 +12,11 @@
 \renewcommand{\left}{\mathopen{}\mathclose\bgroup\originalleft}
 \renewcommand{\right}{\aftergroup\egroup\originalright}
 
+% === To allow for labeling of rows and columns of a matrix ===
+\usepackage{kbordermatrix}
+\renewcommand{\kbldelim}{(} % Left delimiter
+\renewcommand{\kbrdelim}{)} % Right delimiter
+
 \newcommand{\ba}[1]{\left< #1 \right>} % brackets angled
 \newcommand{\bs}[1]{\left[ #1 \right]} % brackets square
 \newcommand{\br}[1]{\left( #1 \right)} % brackets round

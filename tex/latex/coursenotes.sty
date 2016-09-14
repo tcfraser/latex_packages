@@ -1,4 +1,5 @@
 % Packages
+\usepackage[bottom]{footmisc}
 \usepackage{shared}
 
 % Configuration
@@ -83,9 +84,19 @@
     \newpage
 }
 
-\newcommand{\heading}[1]{
-    \vspace{0.1in}
-    \textbf{#1:}
-}
-
 \newcommand{\tabitem}{~~\llap{\textbullet}~~}
+
+\newcommand{\term}[1]{\textcolor{Mahogany}{\textbf{#1}}}
+
+% === Numbering For amsthm theorem environments ===
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
