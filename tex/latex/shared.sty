@@ -21,7 +21,7 @@
 \usepackage{lastpage} % For total page count
 \usepackage{tikz} % For drawing things on graphs
 \usetikzlibrary{calc} % For relative points
-\usetikzlibrary{decorations.markings, arrows.meta, arrows, decorations.pathreplacing, shapes.geometric} % for arrows half way
+\usetikzlibrary{decorations.markings, arrows.meta, arrows, decorations.pathreplacing, shapes.geometric, decorations.pathmorphing} % for arrows half way
 \usepackage{tikz-3dplot} % 3d Plotting
 \usepackage{pgfplots} % For Graphing
 \usepgflibrary{fpu} % To deal with dimension too large errors
@@ -36,7 +36,7 @@
 \pgfplotsset{compat=1.12} % Requesting a specific version
 \usepackage[utf8]{inputenc} % Font with all characters
 \usepackage[T1]{fontenc} % Font with all characters
-% \usepackage{dsfont} % For \mathds
+\usepackage{bbm} % For the identity symbol
 % \usepackage{eufrak} % For gothic font letters in mathmode Note: Redundant if amsfonts is used
 \usepackage{lmodern} % Font with all characters
 \usepackage{csquotes} % For quotes
@@ -45,3 +45,6 @@
 \usepackage{mathmacros} % For TC's custom macros for math
 \usepackage{scope} % For TC's custom set, const, and scope parameters configuarion
 \usepackage{draft} % For identifying work unfinished
+
+
+\usepackage{dsfont} % For the identity symbol

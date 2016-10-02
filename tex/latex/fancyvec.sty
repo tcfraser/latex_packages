@@ -1,6 +1,4 @@
-\makeatletter
-\newcommand{\ve}[1]{\vec{#1}\@ifnextchar{'}{\,}{}}
-\makeatother
+\newcommand{\ve}[1]{\vec{#1}\@ifnextchar{^}{\,}{\@ifnextchar{'}{\,}{}}}
 
 \providecommand{\ove}[1]{\overrightarrow{#1}}
 \providecommand{\bve}[1]{\mathbf{#1}}
@@ -8,6 +6,10 @@
 \providecommand{\ddve}[1]{\ddot{\ve{#1}}}
 \providecommand{\dddve}[1]{\dddot{\ve{#1}}}
 
+\newcommand{\del}{\nabla} % nabla alias
+\newcommand{\vdel}{\ve{\nabla}} % nabla alias
+\newcommand{\curl}{\vdel\times} % curl operator
+\renewcommand{\div}{\vdel\cdot} % divergence operator NOTE: this overrides the division symbol
 % a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,
 
 % \providecommand{\ve}{\ve{r}}
