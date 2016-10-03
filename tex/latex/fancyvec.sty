@@ -1,4 +1,12 @@
 \newcommand{\ve}[1]{\vec{#1}\@ifnextchar{^}{\,}{\@ifnextchar{'}{\,}{}}}
+\newcommand{\ha}[1]{\hat{#1}}
+
+\newcommand{\setfancyvecbold}{
+\renewcommand{\ve}[1]{\bm{##1}}%
+\renewcommand{\ident}{\mathbf{1}}%
+\let\oldhat\hat%
+\renewcommand{\hat}[1]{\bm{\oldhat{##1}}}%
+}
 
 \providecommand{\ove}[1]{\overrightarrow{#1}}
 \providecommand{\bve}[1]{\mathbf{#1}}
@@ -92,7 +100,7 @@
 \providecommand{\hX}{\hat{X}}
 \providecommand{\hY}{\hat{Y}}
 \providecommand{\hZ}{\hat{Z}}
-\providecommand{\vA}{\ve{A}}
+% \providecommand{\vA}{\ve{A}}
 \providecommand{\vB}{\ve{B}}
 \providecommand{\vC}{\ve{C}}
 \providecommand{\vD}{\ve{D}}
