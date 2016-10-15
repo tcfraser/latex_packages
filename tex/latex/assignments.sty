@@ -1,6 +1,8 @@
 % Packages
 \usepackage{shared}
 
+\usepackage{colortbl}
+
 % Configuration
 \allowdisplaybreaks % allow equation environments to page break
 \setlength\parindent{0pt} % Removes all indentation from paragraphs
@@ -72,6 +74,12 @@
 }{
 \onExitProblem{\ProblemName\ \ProblemSectionName} % Header and footer after the environment
 }
+
+\newenvironment{ProblemSource}{%
+\begin{tabular}{l!{\vrule width 1pt}>{\columncolor[gray]{0.95}}p{0.92\textwidth}}\quad &%
+}{%
+\end{tabular}\newline\newline%
+}%
 
 % Title Page
 \newcommand{\titlePage}{
