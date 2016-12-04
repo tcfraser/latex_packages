@@ -23,6 +23,7 @@
 \set{DueDate}{Due Date}
 \set{DateCompleted}{\today}
 
+
 % Set up the header and footer
 \pagestyle{fancy}
 \lhead{\ClassName{} -- \AuthorName{}} % Top left header
@@ -85,6 +86,7 @@
 
 % Title Page
 \newcommand{\titlePage}{
+\date{\DateCompleted}
 \maketitle
 \thispagestyle{empty}
 \newpage
