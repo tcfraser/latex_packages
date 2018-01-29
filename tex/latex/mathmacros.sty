@@ -4,7 +4,6 @@
 \usepackage{fancyvec} % For better vectors
 \usepackage{amssymb} % For set symbols
 \usepackage{mathtools} % For ceiling/floor brackets
-\usepackage{siunitx} % For units
 
 % Brackets
 \let\originalleft\left
@@ -33,20 +32,12 @@
 
 \newcommand{\f}[2]{\frac{#1}{#2}} % fraction shorthand
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert} % norm
-\newcommand{\iso}{\cong} % isomorphic alias
 \renewcommand{\inf}{\infty} % infty alias NOTE: this replaces the inf operator
 \newcommand{\di}{\partial} % di alias
-\newcommand{\defined}{\equiv} % defined alias
-\newcommand{\celsius}{^o C} % Simple celsius I'll likely improve later
-\newcommand{\w}{\omega} % omega alias
 \newcommand{\eq}{\addtocounter{equation}{1}\tag{\theequation}} % adds a number to unnumbered equation
 \newcommand{\tsb}[1]{_\text{#1}} % Text subscript
 \newcommand{\tsp}[1]{^\text{#1}} % Text superscript
-\newcommand{\note}[1]{\quad \text{#1}} % Equation note
 \newcommand{\ident}{\mathbbm{1}}
-
-% sequences
-\newcommand{\tok}[2]{#1, \ldots, #2}
 
 % braces
 \newcommand{\untext}[2]{\underbrace{#1}_{\text{#2}}}
@@ -72,20 +63,13 @@
 \newcommand{\Ka}{\Kappa}
 \newcommand{\ro}{\rho}
 \newcommand{\Ro}{\Rho}
-\renewcommand{\si}{\sigma}
+\providecommand{\si}{\sigma} % Potential conflict with SI unitx package
 \newcommand{\Si}{\Sigma}
+\newcommand{\w}{\omega} % omega alias
 
 % Operators
 \DeclareMathOperator{\Tr}{Tr}
-\DeclareMathOperator{\Lin}{Lin}
-\DeclareMathOperator{\Bin}{Bin}
 \DeclareMathOperator{\sgn}{sgn}
-\DeclareMathOperator{\sinc}{sinc}
-
-% Horizontal Box used for drawing in post-compilation
-\newcommand{\cbox}{\begin{center}
-\fbox{\begin{minipage}{4in} \hfill\vspace{2in} \end{minipage}}
-\end{center}}
 
 % Math Sets
 \newcommand{\R}{{\mathbb{R}}}
@@ -103,10 +87,6 @@
 \newcommand{\ti}[1]{\tilde{#1}\hspace{0pt}} % Note the hspace is for {\ti{a}^b}_c to render correctly
 \newcommand{\tbar}[1]{\bar{#1}\hspace{0pt}} % Note the hspace is for {\bar{a}^b}_c to render correctly
 \newcommand{\tk}[1]{\hspace{0pt}} % Note the hspace is for {\bar{a}^b}_c to render correctly
-
-% Scipt letters
-\def\rcurs{{\mbox{$\resizebox{.09in}{.08in}{\includegraphics[trim= 1em 0 14em 0,clip]{script_r/ScriptR.pdf}}$}}}
-\def\brcurs{{\mbox{$\resizebox{.09in}{.08in}{\includegraphics[trim= 1em 0 14em 0,clip]{script_r/BoldR.pdf}}$}}}
 
 % Differentials
 \newcommand{\dif}{\mathrm{d}} % differential
@@ -138,10 +118,3 @@
 \newcommand{\oiintl}{\oiint\limits} % integral with limits alias
 \newcommand{\iiintl}{\iiint\limits} % integral with limits alias
 \newcommand{\oiiintl}{\oiiint\limits} % integral with limits alias
-
-% siunitx
-\DeclareSIUnit\pc{pc}
-\DeclareSIUnit\rot{rot}
-\DeclareSIUnit\yr{yr}
-\DeclareSIUnit\lyr{lyr}
-\DeclareSIUnit\AU{AU}
