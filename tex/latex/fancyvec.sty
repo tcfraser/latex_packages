@@ -1,6 +1,10 @@
 \newcommand{\ve}[1]{\vec{#1}\@ifnextchar{^}{\,}{\@ifnextchar{'}{\,}{}}}
 \newcommand{\ha}[1]{\hat{#1}}
+\newcommand{\ti}[1]{\tilde{#1}\hspace{0pt}} % Note the hspace is for {\ti{a}^b}_c to render correctly
+\newcommand{\tbar}[1]{\bar{#1}\hspace{0pt}} % Note the hspace is for {\bar{a}^b}_c to render correctly
+\newcommand{\tk}[1]{\hspace{0pt}} % Note the hspace is for {\bar{a}^b}_c to render correctly
 
+% Call \setfancyvecbold in order to convert all vectors to bold vectors
 \newcommand{\setfancyvecbold}{
 \renewcommand{\ve}[1]{\bm{##1}}%
 \renewcommand{\ident}{\mathbf{1}}%
@@ -19,110 +23,3 @@
 \newcommand{\curl}{\vdel\times} % curl operator
 \renewcommand{\div}{\vdel\cdot} % divergence operator NOTE: this overrides the division symbol
 % a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,
-
-% \providecommand{\ve}{\ve{r}}
-
-\providecommand{\va}{\ve{a}}
-\providecommand{\vb}{\ve{b}}
-\providecommand{\vc}{\ve{c}}
-\providecommand{\vd}{\ve{d}}
-\providecommand{\ve}{\ve{e}}
-\providecommand{\vf}{\ve{f}}
-\providecommand{\vg}{\ve{g}}
-\providecommand{\vh}{\ve{h}}
-\providecommand{\vi}{\ve{i}}
-\providecommand{\vj}{\ve{j}}
-\providecommand{\vk}{\ve{k}}
-\providecommand{\vl}{\ve{l}}
-\providecommand{\vm}{\ve{m}}
-\providecommand{\vn}{\ve{n}}
-\providecommand{\vo}{\ve{o}}
-% \providecommand{\vp}{\ve{p}}
-\providecommand{\vq}{\ve{q}}
-\providecommand{\vr}{\ve{r}} % Conflicts with revtex
-\providecommand{\vs}{\ve{s}}
-\providecommand{\vt}{\ve{t}}
-\providecommand{\vu}{\ve{u}}
-\providecommand{\vv}{\ve{v}}
-\providecommand{\vw}{\ve{w}}
-\providecommand{\vx}{\ve{x}}
-\providecommand{\vy}{\ve{y}}
-\providecommand{\vz}{\ve{z}}
-\providecommand{\ha}{\hat{a}}
-\providecommand{\hb}{\hat{b}}
-\providecommand{\hc}{\hat{c}}
-\providecommand{\hd}{\hat{d}}
-\providecommand{\he}{\hat{e}}
-\providecommand{\hf}{\hat{f}}
-\providecommand{\hg}{\hat{g}}
-\providecommand{\hh}{\hat{h}}
-\providecommand{\hi}{\hat{i}}
-\providecommand{\hj}{\hat{j}}
-\providecommand{\hk}{\hat{k}}
-\providecommand{\hl}{\hat{l}}
-\providecommand{\hm}{\hat{m}}
-\providecommand{\hn}{\hat{n}}
-\providecommand{\ho}{\hat{o}}
-\providecommand{\hp}{\hat{p}}
-\providecommand{\hq}{\hat{q}}
-\providecommand{\hr}{\hat{r}}
-\providecommand{\hs}{\hat{s}}
-% \providecommand{\ht}{\hat{t}} Causes problems. Sometimes already defined. Nearly perfect :(.
-\providecommand{\hu}{\hat{u}}
-\providecommand{\hv}{\hat{v}}
-\providecommand{\hw}{\hat{w}}
-\providecommand{\hx}{\hat{x}}
-\providecommand{\hy}{\hat{y}}
-\providecommand{\hz}{\hat{z}}
-\providecommand{\hA}{\hat{A}}
-\providecommand{\hB}{\hat{B}}
-\providecommand{\hC}{\hat{C}}
-\providecommand{\hD}{\hat{D}}
-\providecommand{\hE}{\hat{E}}
-\providecommand{\hF}{\hat{F}}
-\providecommand{\hG}{\hat{G}}
-\providecommand{\hH}{\hat{H}}
-\providecommand{\hI}{\hat{I}}
-\providecommand{\hJ}{\hat{J}}
-\providecommand{\hK}{\hat{K}}
-\providecommand{\hL}{\hat{L}}
-\providecommand{\hM}{\hat{M}}
-\providecommand{\hN}{\hat{N}}
-\providecommand{\hO}{\hat{O}}
-\providecommand{\hP}{\hat{P}}
-\providecommand{\hQ}{\hat{Q}}
-\providecommand{\hR}{\hat{R}}
-\providecommand{\hS}{\hat{S}}
-\providecommand{\hT}{\hat{T}} % Already defined. Neatly perfect :(.
-\providecommand{\hU}{\hat{U}}
-\providecommand{\hV}{\hat{V}}
-\providecommand{\hW}{\hat{W}}
-\providecommand{\hX}{\hat{X}}
-\providecommand{\hY}{\hat{Y}}
-\providecommand{\hZ}{\hat{Z}}
-\providecommand{\vA}{\ve{A}}
-\providecommand{\vB}{\ve{B}}
-\providecommand{\vC}{\ve{C}}
-\providecommand{\vD}{\ve{D}}
-\providecommand{\vE}{\ve{E}}
-\providecommand{\vF}{\ve{F}}
-\providecommand{\vG}{\ve{G}}
-\providecommand{\vH}{\ve{H}}
-\providecommand{\vI}{\ve{I}}
-\providecommand{\vJ}{\ve{J}}
-\providecommand{\vK}{\ve{K}}
-\providecommand{\vL}{\ve{L}}
-\providecommand{\vM}{\ve{M}}
-\providecommand{\vN}{\ve{N}}
-\providecommand{\vO}{\ve{O}}
-\providecommand{\vP}{\ve{P}}
-\providecommand{\vQ}{\ve{Q}}
-\providecommand{\vR}{\ve{R}}
-\providecommand{\vS}{\ve{S}}
-\providecommand{\vT}{\ve{T}}
-\providecommand{\vU}{\ve{U}}
-\providecommand{\vV}{\ve{V}}
-\providecommand{\vW}{\ve{W}}
-\providecommand{\vX}{\ve{X}}
-\providecommand{\vY}{\ve{Y}}
-\providecommand{\vZ}{\ve{Z}}

@@ -1,8 +1,8 @@
 % === Packages ===
 \usepackage{bm} % For universal bolding
 % \usepackage[bottom]{footmisc} % Aligns footnote to the bottom of the page
-\usepackage[colorlinks=true, linkcolor=blue, citecolor=MidnightBlue]{hyperref} % automatic hyperlinks that are blue
-\usepackage[shortlabels]{enumitem} % For enumerating labels like a), b), etc.
+\usepackage{hyperref} % automatic hyperlinks that are blue
+% \usepackage[shortlabels]{enumitem} % For enumerating labels like a), b), etc. % Clashes with enumerate in beamer
 \usepackage{siunitx} % For units
 \usepackage{amsmath} % American mathematics society
 \usepackage{amsthm} % The AMS theorems package
@@ -18,7 +18,7 @@
 \usepackage[dvipsnames]{xcolor} % For divps compatible colors
 \usepackage{array} % For better tables
 \usepackage[makeroom]{cancel} % For canceling out terms
-\hypersetup{colorlinks, urlcolor=blue} % blue links when using \url{...}
+\hypersetup{colorlinks, allcolors=blue} % blue links when using \url{...}
 \usepackage{fancyhdr} % Required for custom headers
 \usepackage{extramarks} % Required for headers and footers
 \usepackage{lastpage} % For total page count
@@ -38,7 +38,7 @@
 \pgfplotsset{compat=1.12} % Requesting a specific version
 \usepackage[utf8]{inputenc} % Font with all characters
 \usepackage[T1]{fontenc} % Font with all characters
-\usepackage{bbm} % For the identity symbol
+\usepackage{bbm} % For the identity symbol % Super ugly
 % \usepackage{eufrak} % For gothic font letters in mathmode Note: Redundant if amsfonts is used
 \usepackage{lmodern} % Font with all characters
 \usepackage{csquotes} % For quotes

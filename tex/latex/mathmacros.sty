@@ -1,20 +1,35 @@
 % Packages
-\usepackage{amsmath}
-\usepackage{esint} % For closed integrals
-\usepackage{fancyvec} % For better vectors
-\usepackage{amssymb} % For set symbols
-\usepackage{mathtools} % For ceiling/floor brackets
+\usepackage{amsmath}    % For a number of commands
+\usepackage{esint}      % For 'closed' integrals
+\usepackage{mathtools}  % For ceiling/floor brackets
+\usepackage{fancyvec}   % see fancyvec.sty
 
-% Brackets
+% font macros
+\newcommand{\s}[1]{\mathcal{#1}}
+\newcommand{\p}[1]{\mathsf{#1}}
+
+% special sets
+\usepackage{amssymb} % for special sets
+\newcommand{\R}{{\mathbb{R}}}
+\newcommand{\C}{{\mathbb{C}}}
+\newcommand{\Z}{{\mathbb{Z}}}
+\newcommand{\N}{{\mathbb{N}}}
+\newcommand{\Q}{{\mathbb{Q}}}
+
+% Labelling rows and columns of a matrix
+\usepackage{kbordermatrix}  % To allow for labeling of rows and columns of a matrix
+\renewcommand{\kbldelim}{(} % Left delimiter
+\renewcommand{\kbrdelim}{)} % Right delimiter
+
+% MathOperators
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\sgn}{sgn}
+
+% Brackets (this ensures better spacing for brackets)
 \let\originalleft\left
 \let\originalright\right
 \renewcommand{\left}{\mathopen{}\mathclose\bgroup\originalleft}
 \renewcommand{\right}{\aftergroup\egroup\originalright}
-
-% === To allow for labeling of rows and columns of a matrix ===
-\usepackage{kbordermatrix}
-\renewcommand{\kbldelim}{(} % Left delimiter
-\renewcommand{\kbrdelim}{)} % Right delimiter
 
 \newcommand{\ba}[1]{\left< #1 \right>} % brackets angled
 \newcommand{\bs}[1]{\left[ #1 \right]} % brackets square
@@ -29,22 +44,16 @@
 \newcommand{\braket}[2]{\left< #1 \middle| #2 \right>} % bra|ket
 \newcommand{\bcm}[2]{\left\{ #1 \middle| #2 \right\}} % bra|ket
 \newcommand{\bramidket}[3]{\left< #1 \middle| #2 \middle| #3 \right>} % bra|mid|ket
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert} % norm
 
 \newcommand{\f}[2]{\frac{#1}{#2}} % fraction shorthand
-\newcommand{\norm}[1]{\left\lVert#1\right\rVert} % norm
 \renewcommand{\inf}{\infty} % infty alias NOTE: this replaces the inf operator
 \newcommand{\di}{\partial} % di alias
 \newcommand{\eq}{\addtocounter{equation}{1}\tag{\theequation}} % adds a number to unnumbered equation
 \newcommand{\tsb}[1]{_\text{#1}} % Text subscript
 \newcommand{\tsp}[1]{^\text{#1}} % Text superscript
-\newcommand{\ident}{\mathbbm{1}}
 
-% braces
-\newcommand{\untext}[2]{\underbrace{#1}_{\text{#2}}}
-\newcommand{\ovtext}[2]{\overbrace{#1}^{\text{#2}}}
-\newcommand{\iszero}[1]{\underbrace{#1}_{= 0}}
-
-% greek
+% Tiny Greek
 \newcommand{\al}{\alpha}
 \newcommand{\be}{\beta}
 \newcommand{\ga}{\gamma}
@@ -65,28 +74,6 @@
 \newcommand{\Ro}{\Rho}
 \providecommand{\si}{\sigma} % Potential conflict with SI unitx package
 \newcommand{\Si}{\Sigma}
-\newcommand{\w}{\omega} % omega alias
-
-% Operators
-\DeclareMathOperator{\Tr}{Tr}
-\DeclareMathOperator{\sgn}{sgn}
-
-% Math Sets
-\newcommand{\R}{{\mathbb{R}}}
-\newcommand{\C}{{\mathbb{C}}}
-\newcommand{\Z}{{\mathbb{Z}}}
-\newcommand{\N}{{\mathbb{N}}}
-\newcommand{\Q}{{\mathbb{Q}}}
-
-% Script macro
-\newcommand{\s}[1]{\mathcal{#1}}
-
-% Vectors
-% see fancyvec
-% tilde
-\newcommand{\ti}[1]{\tilde{#1}\hspace{0pt}} % Note the hspace is for {\ti{a}^b}_c to render correctly
-\newcommand{\tbar}[1]{\bar{#1}\hspace{0pt}} % Note the hspace is for {\bar{a}^b}_c to render correctly
-\newcommand{\tk}[1]{\hspace{0pt}} % Note the hspace is for {\bar{a}^b}_c to render correctly
 
 % Differentials
 \newcommand{\dif}{\mathrm{d}} % differential
@@ -111,7 +98,7 @@
 
 % integrals
 \newcommand{\intl}{\int\limits} % integral with limits alias
-\newcommand{\intlf}{\intl_{-\infty}^{\infty}} % integral with limits alias
+\newcommand{\intlf}{\intl_{-\infty}^{+\infty}} % integral with limits alias
 \newcommand{\ointl}{\oint\limits} % integral with limits alias
 \newcommand{\iintl}{\iint\limits} % integral with limits alias
 \newcommand{\idotsintl}{\idotsint\limits} % integral with limits alias
