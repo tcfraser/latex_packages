@@ -7,7 +7,7 @@
 % Call \setfancyvecbold in order to convert all vectors to bold vectors
 \newcommand{\setfancyvecbold}{
 \renewcommand{\ve}[1]{\bm{##1}}%
-\renewcommand{\ident}{\mathbf{1}}%
+\providecommand{\ident}{\mathbf{1}}%
 \let\oldhat\hat%
 \renewcommand{\hat}[1]{\bm{\oldhat{##1}}}%
 }
