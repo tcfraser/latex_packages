@@ -23,7 +23,6 @@
 \set{DueDate}{Due Date}
 \set{DateCompleted}{\today}
 
-
 % Set up the header and footer
 \pagestyle{fancy}
 \lhead{\ClassName{} -- \AuthorName{}} % Top left header
@@ -56,7 +55,7 @@
 \newenvironment{Problem}[1][Problem \arabic{ProblemCounter}]{ % Makes a new environment called homeworkProblem which takes 1 argument (custom name) but the default is "Problem #"
 \stepcounter{ProblemCounter} % Increase counter for number of problems
 \renewcommand{\ProblemName}{#1} % Assign \ProblemName the name of the problem
-\section{\ProblemName} % Make a section in the document with the custom problem count
+\subsection{\ProblemName} % Make a section in the document with the custom problem count
 \onEnterProblem{\ProblemName} % Upon entering the environment
 }{
 \onExitProblem{\ProblemName} % Upon exiting the environment
@@ -70,7 +69,7 @@
 \newenvironment{ProblemSection}[1][(\alph{ProblemSectionCounter})]{ % New environment for sections within homework problems, takes 1 argument - the name of the section
 \stepcounter{ProblemSectionCounter} % Increase counter for number of problem sections
 \renewcommand{\ProblemSectionName}{#1} % Assign \ProblemSectionName to the name of the section from the environment argument
-\subsection{\ProblemSectionName} % Make a subsection with the custom name of the subsection
+\subsubsection{\ProblemSectionName} % Make a subsection with the custom name of the subsection
 \onEnterProblem{\ProblemName\ \ProblemSectionName} % Header and footer within the environment
 }{
 \onExitProblem{\ProblemName\ \ProblemSectionName} % Header and footer after the environment
